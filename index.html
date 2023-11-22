@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('M.png') center/cover no-repeat; /* Change 'M.png' to your image file */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Limit the maximum width of the form */
+            width: 90%; /* Set a percentage width for smaller screens */
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: calc(100% - 16px); /* Subtract padding from the width */
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="personalizedForm">
+        <label for="months">Ilang months na tayo?</label>
+        <input type="text" id="months" name="months" required>
+
+        <label for="favoriteColor">What's my favorite color?</label>
+        <input type="text" id="favoriteColor" name="favoriteColor" required>
+
+        <label for="loveAboutMe">3 things you love about me?</label>
+        <input type="text" id="loveAboutMe" name="loveAboutMe" required>
+
+        <label for="dislikeAboutMe">Ano ano yung mga bagay na ayaw mo sakin?</label>
+        <input type="text" id="dislikeAboutMe" name="dislikeAboutMe" required>
+
+        <label for="impression">What is your impression of me?</label>
+        <input type="text" id="impression" name="impression" required>
+
+        <label for="sayALot">What are the 3 things I say a lot?</label>
+        <input type="text" id="sayALot" name="sayALot" required>
+
+        <label for="futureHope">What's one thing you hope for our future?</label>
+        <input type="text" id="futureHope" name="futureHope" required>
+
+        <label for="alwaysLove">Will you always love me?</label>
+        <input type="text" id="alwaysLove" name="alwaysLove" required>
+
+        <label for="mahalKita">Mahal na mahal kita</label>
+        <input type="text" id="mahalKita" name="mahalKita" required>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Retrieve form data
+            var formData = new FormData(document.getElementById("personalizedForm"));
+
+            // You can add additional JavaScript functionality here if needed
+            // For example, form validation or other actions before redirection
+
+            // Redirect to the video URL
+            window.location.href = "Mwa.mp4";
+        }
+    </script>
+
+</body>
+</html>
